@@ -1,7 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+
+/**
+ * Author @Viral Prajapati, a.k.a Kaal581993
+ * 
+ * Program on different types of White Box Testing & Stress Testing on Finding the Largest of Three Numbers in Java
+ * github.com/Kaal581993
+ * 
  */
 package largestof3;
 import java.io.*;
@@ -19,7 +22,7 @@ public class Largestof3 {
     /**/
  public static boolean isNumeric(String str){  
   try{  
-    double d = Double.parseDouble(str);  
+    double d = Double.parseDouble(str);  //type casting to double value for further analysis
   }catch(NumberFormatException nfe){  
     return false;  
   }  
@@ -65,7 +68,7 @@ public class Largestof3 {
         InputStreamReader ir= new InputStreamReader(System.in);
         br = new BufferedReader(ir);
         a= br.readLine();
-        if (!a.matches("^[0-9]\\d{0,9}(\\.\\d{1,20})?%?$")) {
+        if (!a.matches("^[0-9]\\d{0,9}(\\.\\d{1,20})?%?$"/*Regular Expression to accept the decimal value upto 20 digits*/)) {
                 System.out.println("Invalid number");
                 exit(1);
         }
@@ -74,7 +77,7 @@ public class Largestof3 {
         br = new BufferedReader(ir);
         b= br.readLine();
 
-        if (!b.matches("^[0-9]\\d{0,9}(\\.\\d{1,20})?%?$")) {
+        if (!b.matches("^[0-9]\\d{0,9}(\\.\\d{1,20})?%?$"/*Regular Expression to accept the decimal value upto 20 digits*/)) {
                 System.out.println("Invalid number");
                 exit(1);
         }
@@ -84,11 +87,10 @@ public class Largestof3 {
         br = new BufferedReader(ir);
         c= br.readLine();
         
-        if (!c.matches("^[0-9]\\d{0,9}(\\.\\d{1,20})?%?$")) {
+        if (!c.matches("^[0-9]\\d{0,9}(\\.\\d{1,20})?%?$"/*Regular Expression to accept the decimal value upto 20 digits*/)) {
                 System.out.println("Invalid number");
                 exit(1);
         }        
-        
         
         System.out.println("The First No. is:"+a);
         System.out.println("The Secound No. is:"+b);
